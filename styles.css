@@ -232,28 +232,130 @@ nav {
 }
 
 
-/* hero */
+/* Header Styling */
 header {
   min-height: 100vh;
   background: linear-gradient(rgba(63, 208, 212, 0.5), rgba(0, 0, 0, 0.7)),
     url(./back.jpg) center/cover no-repeat;
 }
+
 .banner {
   min-height: 100vh;
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
-.container h1 {
+
+.banner h1 {
   color: var(--clr-white);
+  font-size: 3rem;
   text-transform: uppercase;
+  margin-bottom: 1rem;
 }
-.container p {
+
+.banner p {
   color: var(--clr-white);
-  max-width: 25rem;
-  margin: 0 auto;
-  margin-bottom: 1.25rem;
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin-bottom: 1.5rem;
 }
+
+.banner .btn {
+  color: var(--clr-white);
+  background: var(--clr-primary-4);
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: var(--radius);
+}
+
+.banner .btn:hover {
+  background: var(--clr-primary-5);
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.8);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  transition: var(--transition);
+}
+
+.nav-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-toggle {
+  font-size: 1.5rem;
+  color: var(--clr-grey-1);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
+.logo {
+  height: 50px;
+}
+
+/* Links */
+.links-container {
+  height: 0;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+}
+
+.links a {
+  color: var(--clr-grey-1);
+  font-size: 1rem;
+  text-transform: capitalize;
+  padding: 0.5rem;
+  transition: var(--transition);
+}
+
+.links a:hover {
+  color: var(--clr-primary-5);
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .links-container {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+  }
+
+  .links {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+
 
 /* sections and title */
 
