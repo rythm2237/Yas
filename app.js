@@ -20,6 +20,22 @@ navToggle.addEventListener("click", function () {
   }
 });
 
+// JavaScript for Navbar Toggle
+document.addEventListener("DOMContentLoaded", () => {
+  const navToggle = document.querySelector(".nav-toggle");
+  const linksContainer = document.querySelector(".links-container");
+
+  navToggle.addEventListener("click", () => {
+    const containerHeight = linksContainer.getBoundingClientRect().height;
+    if (containerHeight === 0) {
+      linksContainer.style.height = `${linksContainer.scrollHeight}px`;
+    } else {
+      linksContainer.style.height = 0;
+    }
+  });
+});
+
+
 // ********** fixed navbar ************
 const navbar = document.getElementById("nav");
 const topLink = document.querySelector(".top-link");
