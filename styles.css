@@ -966,6 +966,9 @@ input[type=submit]:hover {
   text-decoration: none; /* Remove underline */
   cursor: pointer; /* Pointer cursor on hover */
   transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+  margin: 0 auto; /* Add automatic margins to center */
+  display: block; /* Make the button a block element to center */
+  text-align: center; /* Align text inside the button */
 }
 
 /* Hover and Focus Effects */
@@ -978,6 +981,7 @@ input[type=submit]:hover {
   background-color: #00408a; /* Darker when clicked */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduce shadow when clicked */
 }
+ 
 
 
 
