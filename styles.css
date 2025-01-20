@@ -23,9 +23,15 @@ body {
   padding: 0;
 }
 
-h1, h2, h3 {
+h1, h3 {
   margin-bottom: var(--spacing);
   font-weight: bold;
+  color: var(--clr-primary);
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
   color: var(--clr-primary);
 }
 
@@ -82,10 +88,10 @@ nav {
 }
 
 .links a {
+  margin: 0 1rem;
   color: var(--clr-grey);
   text-decoration: none;
-  padding: 0.5rem 1rem;
-  transition: color var(--transition);
+  font-weight: bold;
 }
 
 .links a:hover {
@@ -129,6 +135,7 @@ nav {
 /* Sections */
 section {
   padding: 3rem 1rem;
+  margin-bottom: 2rem;
   text-align: center;
 }
 
@@ -142,7 +149,7 @@ section {
 .service {
   background: var(--clr-white);
   padding: 1rem;
-  border-radius: 5px;
+  border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -156,9 +163,12 @@ section {
 footer {
   background: var(--clr-grey);
   color: var(--clr-white);
-  text-align: center;
   padding: 2rem 1rem;
-  margin-top: 3rem;
+  text-align: center;
+}
+
+footer p {
+  margin: 1rem 0;
 }
 
 footer a {
@@ -169,6 +179,7 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+
 
 footer ul {
   list-style: none;
@@ -210,11 +221,27 @@ footer .top-link:hover {
 
   .banner h1 {
     font-size: 2rem;
+    margin-bottom: 1rem;
   }
 
   .banner p {
     font-size: 1rem;
+    margin-bottom: 2rem;
   }
+  .banner .btn-primary {
+  padding: 0.75rem 1.5rem;
+  background: var(--clr-white);
+  color: var(--clr-primary);
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.banner .btn-primary:hover {
+  background: var(--clr-primary);
+  color: var(--clr-white);
+}
 }
 
 @media screen and (max-width: 576px) {
