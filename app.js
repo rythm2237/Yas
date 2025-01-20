@@ -311,5 +311,34 @@ randomBtn.addEventListener('click', function () {
 });
 
 
+document.addEventListener("DOMContentLoaded", () => {
+  const scrollLinks = document.querySelectorAll(".scroll-link");
+  const linksContainer = document.querySelector(".links-container");
+
+  // Smooth scrolling with offset for sticky header
+  scrollLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault(); // Prevent default anchor behavior
+      const id = e.currentTarget.getAttribute("href").slice(1);
+      const section = document.getElementById(id);
+
+      if (section) {
+        const headerHeight = document.querySelector("nav").offsetHeight;
+        const position = section.offsetTop - headerHeight;
+
+        window.scrollTo({
+          top: position,
+          behavior: "smooth",
+        });
+
+        // Close the menu after clicking
+        linksContainer.style.height = 0;
+      }
+    });
+  });
+});
+
+
+
 
 
