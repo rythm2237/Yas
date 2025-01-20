@@ -1,122 +1,364 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Yas Digital Marketing - Professional services and solutions.">
-  <meta name="keywords" content="Digital Marketing, Services, SEO, Social Media, Products">
-  <meta name="author" content="Yas Digital Marketing">
-  <title>Yas Digital Marketing</title>
-  <link rel="icon" type="image/x-icon" href="/favicon.png">
-  <!-- Font Awesome for Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="responsive.css">
-</head>
-<body>
-  <!-- Header Section -->
-  <header id="home">
-    <nav id="nav">
-      <div class="nav-header">
-        <img src="logo.png" alt="Yas Logo" class="logo">
-        <button class="nav-toggle" aria-label="Toggle Navigation">
-          <i class="fas fa-bars"></i>
-        </button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <!-- styles -->
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="responsive.css" />
+  </head>
+  <body>
+    <header id="home">
+      <!-- navbar -->
+      <nav id="nav">
+        <div class="nav-center">
+          <!-- nav header -->
+          <div class="nav-header">
+            <img src="./logo.png" class="logo" alt="logo" />
+            <button class="nav-toggle">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+          <!-- links -->
+          <div class="links-container">
+            <ul class="links">
+              <li>
+                <a href="#home" class="scroll-link">home</a>
+              </li>
+              <li>
+                <a href="#about" class="scroll-link">About Me</a>
+              </li>
+              <li>
+                <a href="#services" class="scroll-link">Resume</a>
+              </li>
+              <li>
+                <a href="#products" class="scroll-link">portfolio</a>
+              </li>
+              <li>
+                <a href="#review" class="scroll-link">Review</a>
+              </li>
+              <li>
+                <a href="#question" class="scroll-link">FAQ</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- banner -->
+      <div class="banner">
+        <div class="container">
+          <h1>who I Am</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas eos
+            neque sunt in? Id, necessitatibus quos quisquam distinctio
+            laudantium fugiat?
+          </p>
+          <a href="#Conntact" class="scroll-link btn btn-white">Conntact Us</a>
+        </div>
       </div>
-      <div class="links-container">
-        <ul class="links">
-          <li><a href="#home" class="scroll-link">Home</a></li>
-          <li><a href="#about" class="scroll-link">About Me</a></li>
-          <li><a href="#services" class="scroll-link">Services</a></li>
-          <li><a href="#products" class="scroll-link">Products</a></li>
-          <li><a href="#review" class="scroll-link">Reviews</a></li>
-          <li><a href="#faq" class="scroll-link">FAQ</a></li>
-          <li><a href="#contact" class="scroll-link">Contact</a></li>
+    </header>
+
+    <!-- about -->
+    <section class="section" id="about">
+      <div class="title">
+        <h2>About<span>Me</span></h2>
+        <h3 class="about-title">Raise Yourself To Help Mankind</h3>
+      </div>
+      <div class="about-center section-center" >
+        <article class="about-img">
+          <img src="/about.jpg" alt="about"/>
+        </article>
+        <article class="about">
+<!-- btn container part -->
+          <div class="btn-container">
+            <button class="tap-btn active"data-id="history">History</button>
+            <button class="tap-btn" data-id="vision">Vision</button>
+            <button class="tap-btn" data-id="goals">Goals</button>
+          </div>
+          <div class="about-content">
+<!--start about items -->
+            <div class="content active" id="history">
+                <h3>History</h3>
+                <p>I'm baby wolf Umami kinfolk salvia jean shorts offal venmo. Knausgaard tilde try-hard, woke fixie banjo man bun. Small batch tumeric mustache tbh wayfarers 8-bit shaman chartreuse tacos. Viral direct trade hoodie ugh chambray, craft beer pork belly flannel tacos single-origin coffee art party migas plaid pop-up.</p>
+            </div>
+<!--end of about items -->
+<!--start about items -->
+            <div class="content" id="vision">
+                <h3>Vision</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+                  asperiores debitis incidunt, eius earum ipsam cupiditate libero?
+                  Iste, doloremque nihil?</p>
+            </div>
+<!--end of about items -->
+<!--start about items -->
+            <div class="content" id="goals">
+                <h3>Goals</h3>
+                <p>mumblecore vice pop-up XOXO lomo kombucha glossier bicycle rights. Umami kinfolk salvia jean shorts offal venmo. Knausgaard tilde try-hard, woke fixie banjo man bun. Small batch tumeric mustache tbh wayfarers 8-bit shaman chartreuse tacos. Viral direct trade hoodie ugh chambray, craft beer pork belly flannel tacos single-origin coffee art party migas plaid pop-up.</p>
+            </div>
+<!--end of about items -->
+          </div>
+        </article>
+      </div>
+    </section>
+    
+<!-- services -->
+    <section id="services" class="section">
+      <div class="title">
+        <h2>our <span>services</span></h2>
+      </div>
+      <div class="container">
+        <div id="slider">
+          <div id="gal">
+          <div class="items">
+            <img src="img/slider/01.jpg">
+            <!-- <p>Web Designing</p> -->
+          </div>
+          
+          <div class="items">
+            <img src="img/slider/02.jpg">
+            
+          </div>
+          
+          <div class="items">
+            <img src="img/slider/03.jpg">
+            
+          </div>
+          
+          <div class="items">
+            <img src="img/slider/04.jpg">
+            
+          </div>
+  
+          <div class="items">
+            <img src="img/slider/05.jpg">
+            
+          </div>
+        </div>
+            
+          <div id="right">  </div>
+          <div id="left">   </div>
+        
+        <ul>
+          <li onmouseover="move(0)">Social Media</li>
+          <li onmouseover="move(1)">SEO</li>
+          <li onmouseover="move(2)">Web Developing</li>
+          <li onmouseover="move(3)">Digital Marketing</li>
+          <li onmouseover="move(4)">Web design</li>
         </ul>
       </div>
-    </nav>
-    <div class="banner">
-      <div class="container">
-        <h1>Welcome to Yas Digital Marketing</h1>
-        <p>Your trusted partner in growing your online presence and reaching your audience effectively.</p>
-        <a href="#contact" class="btn btn-primary">Get in Touch</a>
+      </div> 
+    </section>
+    <!-- Products -->
+    <section id="products" class="section">
+      <div class="title">
+        <h2>Galery <span>Our Products</span></h2>
       </div>
+      <div id="all" >
+        <div class="sut">
+            <!-- <div class="items" onclick="popup()">
+                <img src="img/1.jpg">
+                <div class="info">
+                    <h2>product1</h2>
+                    <p>Details</p>
+                    <span>15000 Ft</span>
+                    <a href="#">Buy</a>
+                </div>
+            </div> 
+        -->
+        </div>
+        <div class="sut"></div>
+        <div class="sut"></div>
+        <div class="sut"></div>
+    
+        <div id="overlay" class="hide" onclick="closeAll()">
+            <div id="pop" class="hide">
+                <img id="big_img" src="img/1.jpg">
+                <p>More Details</p>
+            </div>
+        </div>
+        
     </div>
-  </header>
-
-  <!-- About Section -->
-  <section id="about" class="about-section">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque quod reiciendis asperiores debitis ad.</p>
-    </div>
-  </section>
-
-  <!-- Services Section -->
-  <section id="services" class="services-section">
-    <div class="container">
-      <h2>Our Services</h2>
-      <div class="services">
-        <div class="service">
-          <i class="fas fa-search"></i>
-          <h3>SEO Optimization</h3>
-          <p>Boost your website’s visibility on search engines.</p>
-        </div>
-        <div class="service">
-          <i class="fas fa-bullhorn"></i>
-          <h3>Social Media Marketing</h3>
-          <p>Engage your audience and grow your brand online.</p>
-        </div>
-        <div class="service">
-          <i class="fas fa-chart-line"></i>
-          <h3>Analytics</h3>
-          <p>Track your performance and optimize your strategies.</p>
-        </div>
+    
+<!-- review -->
+    </section>
+    <section id="review" class="section">
+      <div class="title">
+        <h2>our<span>reviews</span></h2>
       </div>
-    </div>
-  </section>
+      <section class="section-center-review">
+        
+        <!-- review -->
+        <article class="review">
+          <div class="img-container">
+            <img src="person-1.jpeg" id="person-img" alt="" />
+          </div>
+          <h4 id="author">sara jones</h4>
+          <p id="job">ux designer</p>
+          <p id="info">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+            asperiores debitis incidunt, eius earum ipsam cupiditate libero?
+            Iste, doloremque nihil?
+          </p>
+          <!-- prev next buttons-->
+          <div class="button-container">
+            <button class="prev-btn">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="next-btn">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+          <!-- random button -->
+          <button class="random-btn">surprise me</button>
+        </article>
+      </section>
+    </section>
+    
+    <section id="question" class="section">
+        <section class="questions">
+          <!-- title -->
+          <div class="title">
+            <h2>general <span>questions</span></h2>
+          </div>
+          <!-- questions -->
+          <div class="section-center-question">
+            <!-- single question -->
+            <article class="question">
+              <!-- question title -->
+              <div class="question-title">
+                <p>do you accept all major credit cards?</p>
+                <button type="button" class="question-btn">
+                  <span class="plus-icon">
+                    <i class="far fa-plus-square"></i>
+                  </span>
+                  <span class="minus-icon">
+                    <i class="far fa-minus-square"></i>
+                  </span>
+                </button>
+              </div>
+              <!-- question text -->
+              <div class="question-text">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est
+                  dolore illo dolores quia nemo doloribus quaerat, magni numquam
+                  repellat reprehenderit.
+                </p>
+              </div>
+            </article>
+            <!-- end of single question -->
+            <!-- single question -->
+            <article class="question">
+              <!-- question title -->
+              <div class="question-title">
+                <p>do you suppport local farmers?</p>
+                <button type="button" class="question-btn">
+                  <span class="plus-icon">
+                    <i class="far fa-plus-square"></i>
+                  </span>
+                  <span class="minus-icon">
+                    <i class="far fa-minus-square"></i>
+                  </span>
+                </button>
+              </div>
+              <!-- question text -->
+              <div class="question-text">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est
+                  dolore illo dolores quia nemo doloribus quaerat, magni numquam
+                  repellat reprehenderit.
+                </p>
+              </div>
+            </article>
+            <!-- end of single question -->
+            <!-- single question -->
+            <article class="question">
+              <!-- question title -->
+              <div class="question-title">
+                <p>do you use organic ingredients?</p>
+                <!-- button -->
+                <button type="button" class="question-btn">
+                  <span class="plus-icon">
+                    <i class="far fa-plus-square"></i>
+                  </span>
+                  <span class="minus-icon">
+                    <i class="far fa-minus-square"></i>
+                  </span>
+                </button>
+              </div>
+              <!-- question text -->
+              <div class="question-text">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est
+                  dolore illo dolores quia nemo doloribus quaerat, magni numquam
+                  repellat reprehenderit.
+                </p>
+              </div>
+            </article>
+            <!-- end of single question -->
+          </div>
+        </section>
+    </section>
+    <!-- footer -->
+    <footer class="section footer" id="Conntact">
+      <div class="all-footer">
+        <div class="firstPart footer-items">
+          <img src="./logo3.png"/>
+        </div>
+        <div class="secondPart footer-items">
+          <a href="#Services">Services</a>
+          <a href="#products">Products</a>
+          <a href="#about">About</a>
+          
+        </div>
+        <div class="addressPart footer-items">
+          <span>Hungary,Budapest</span>
+          <span>+36702614248</span>
+          <span>advertis@rythm.com</span>
+          
+        </div>
+        <div class="conntactPart footer-items">
+          <div class="social">
+            <img src="./img/instagram.svg" alt="insta">
+            <a href="#">Instagram</a>
+          </div>
+          <div class="social">
+            <img src="./img/facebook.svg" alt="facebook">
+            <a href="#">Facebook</a>
+          </div>
+          <div class="social">
+            <img src="./img/linkedin.svg" alt="linkedin">
+            <a href="#">Linkedin</a>
+          </div>
 
-  <!-- Products Section -->
-  <section id="products" class="products-section">
-    <div class="container">
-      <h2>Our Products</h2>
-      <p>Explore our range of digital marketing tools and solutions tailored to your needs.</p>
-    </div>
-  </section>
-
-  <!-- Reviews Section -->
-  <section id="review" class="reviews-section">
-    <div class="container">
-      <h2>Customer Reviews</h2>
-      <p>Hear what our clients have to say about working with us.</p>
-    </div>
-  </section>
-
-  <!-- FAQ Section -->
-  <section id="faq" class="faq-section">
-    <div class="container">
-      <h2>Frequently Asked Questions</h2>
-      <p>Find answers to common questions about our services and products.</p>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <footer id="contact" class="footer">
-    <div class="container">
-      <h2>Contact Us</h2>
-      <p>Have questions or need assistance? We’re here to help!</p>
-      <ul>
-        <li><i class="fas fa-envelope"></i> email@example.com</li>
-        <li><i class="fas fa-phone"></i> +123-456-7890</li>
-        <li><i class="fas fa-map-marker-alt"></i> 123 Digital Street, Marketing City</li>
-      </ul>
-      <p>&copy; <span id="date"></span> Yas Digital Marketing. All rights reserved.</p>
-      <a href="#home" class="top-link" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
-    </div>
-  </footer>
-
-  <!-- JavaScript -->
-  <script src="app.js"></script>
-</body>
+        </div>
+        
+          <form class="form footer-items" action="#">
+              <p>Subscribe to our Newsletter</p>
+              <input type="text" placeholder="Name" name="name" required>
+              <input type="text" placeholder="Email address" name="mail" required>
+              <label>
+                <input type="checkbox" checked="checked" name="subscribe"><p> Daily Newsletter</p>
+              </label>
+              <input type="submit" value="Subscribe">
+          </form>
+      </div>
+      
+      <p>
+        copyright &copy; Rythm digital marketing agency
+        <span id="date"></span>. all rights reserved
+      </p>
+    </footer>
+    <a class="scroll-link top-link" href="#home">
+      <i class="fas fa-arrow-up"></i>
+    </a>
+    <!-- javascript -->
+    <script src="app.js"></script>
+  </body>
 </html>
