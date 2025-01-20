@@ -285,3 +285,13 @@ randomBtn.addEventListener('click', function () {
 
 
 
+// JavaScript to Handle Button Click Event
+document.getElementById('ctaButton').addEventListener('click', function(event) {
+  event.preventDefault(); // Prevent default link behavior
+  
+  // Redirect to Contact Page (replace '/contact' with your actual URL)
+  window.location.href = '/contact'; 
+  
+  // Alternatively, show an alert message (optional):
+  // alert('Thank you for clicking! Redirecting to the contact page...');
+});
