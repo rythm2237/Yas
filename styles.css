@@ -338,19 +338,55 @@ nav {
 }
 
 /* Responsive Navbar */
-@media (max-width: 768px) {
+/* (Mobile) */
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column; /* Stack logo and toggle button */
+    align-items: flex-start; /* Align items to the left */
+    padding: 1rem;
+  }
+
+  .nav-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
   .nav-toggle {
-    display: block;
+    display: block; /* Show the toggle button */
+    font-size: 1.5rem;
+    color: var(--clr-grey-1);
+    background: transparent;
+    border: none;
+    cursor: pointer;
   }
 
   .links-container {
-    width: 100%;
-    background: rgba(255, 255, 255, 0.9);
+    height: 0; /* Hide links initially */
+    overflow: hidden;
+    transition: height 0.3s ease;
+    width: 100%; /* Ensure it spans full width */
   }
 
   .links {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column; /* Stack links vertically */
+    width: 100%;
+    text-align: left; /* Align links to the left */
+  }
+
+  .links a {
+    padding: 0.5rem 1rem; /* Add padding for better tap targets */
+    font-size: 1rem;
+    display: block;
+    width: 100%;
+  }
+
+  .show-links {
+    height: auto; /* Show links when menu is toggled */
+  }
+
+  .logo {
+    height: 40px; /* Adjust logo size for smaller screens */
   }
 }
 
