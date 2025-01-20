@@ -248,6 +248,9 @@ header {
   color: var(--clr-white);
   text-transform: uppercase;
 }
+.container h2 {
+  color: var(--clr-white);
+}
 .container p {
   color: var(--clr-white);
   max-width: 25rem;
