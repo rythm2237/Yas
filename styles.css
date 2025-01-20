@@ -1120,43 +1120,6 @@ nav {
   display: none;
 }
 
-@media screen and (min-width: 800px) {
-  .links {
-    flex-direction: row;
-  }
 
-  .nav-toggle {
-    display: none;
-  }
-}
-
-/* Default: Large screens (row layout) */
-.links-container {
-  height: auto; /* Ensure links are always visible */
-  overflow: visible;
-}
-
-.links {
-  flex-direction: row; /* Align links horizontally */
-  text-align: left;
-}
-
-/* Small screens (column layout) */
-@media screen and (max-width: 800px) {
-  .links-container {
-    height: 0;
-    overflow: hidden;
-    transition: height 0.3s ease;
-  }
-
-  .links {
-    flex-direction: column; /* Stack links vertically */
-    text-align: center;
-  }
-
-  .nav-toggle {
-    display: block; /* Show toggle button on small screens */
-  }
-}
 
 
