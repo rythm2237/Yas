@@ -1051,3 +1051,48 @@ input[type=submit]:hover {
 }
 
 
+/* Add this at the bottom of styles.css */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.links {
+  display: flex;
+  gap: 2rem;
+}
+
+.links a {
+  text-transform: capitalize;
+  font-size: 1rem;
+  color: var(--clr-grey-1);
+  transition: color 0.3s ease;
+}
+
+.links a:hover {
+  color: var(--clr-primary-5);
+}
+
+.nav-toggle {
+  display: none;
+}
+
+@media screen and (min-width: 800px) {
+  .links {
+    flex-direction: row;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+}
+
+
+
