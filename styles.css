@@ -1,89 +1,25 @@
-/*
-=============== 
-Global Styles
-===============
-*/
-
-:root {
-  /* Define your color palette and variables here */
-  --clr-primary-1: hsl(205, 86%, 17%);
-  --clr-primary-5: #49a6e9;
-  --clr-grey-1: hsl(209, 61%, 16%);
-  --clr-grey-5: hsl(210, 22%, 49%);
-  --clr-white: #fff;
-  --clr-secondary: hsl(182, 63%, 54%);
-  --transition: all 0.3s linear;
-  --radius: 0.5rem;
-  --spacing: 0.25rem;
-}
-
-body {
-  font-family: "Roboto", sans-serif;
-  background: var(--clr-grey-10);
-  color: var(--clr-grey-1);
-  margin: 0;
-  padding: 0;
-  scroll-behavior: smooth;
-}
-
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-/*
-=============== 
-Header and Navbar Styles
-===============
-*/
-
-/* Navbar Styling */
+/* Navbar */
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background: rgba(255, 255, 255, 0.9); /* Transparent background */
+  background: rgba(255, 255, 255, 0.9);
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Navbar Center */
-.nav-center {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-
-.nav-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
-
-/* Logo */
-.logo {
-  height: 50px;
-}
-
-/* Navbar Links */
 .links-container {
-  height: 0; /* Hidden by default */
+  height: 0;
   overflow: hidden;
-  transition: height 0.3s ease; /* Smooth toggle animation */
-  width: 100%; /* Full width on mobile */
+  transition: height 0.3s ease;
 }
 
 .links {
   display: flex;
-  flex-direction: column; /* Stack links vertically for mobile */
+  flex-direction: column;
 }
 
 .links a {
@@ -91,95 +27,43 @@ nav {
   font-size: 1rem;
   text-transform: capitalize;
   padding: 0.5rem 1rem;
-  font-weight: bold;
-  transition: var(--transition);
+  transition: color 0.3s ease;
 }
 
 .links a:hover {
   color: var(--clr-primary-5);
 }
 
-/* Navbar Toggle Button */
 .nav-toggle {
-  display: block; /* Visible on small screens */
+  display: block;
   font-size: 1.5rem;
   background: transparent;
   border: none;
-  cursor: pointer;
   color: var(--clr-grey-1);
-  position: absolute;
-  top: 1rem; /* Positioned in the top-right corner */
-  right: 1rem;
-  z-index: 1100;
+  cursor: pointer;
 }
 
-.nav-toggle:hover {
-  color: var(--clr-primary-5);
-}
-
-/* When the menu is open */
 .show-links {
-  height: auto; /* Expand links */
+  height: auto; /* Dynamically expand links */
 }
 
-/* Desktop Layout */
+/* Responsive */
 @media screen and (min-width: 800px) {
   .nav-toggle {
-    display: none; /* Hide toggle button */
+    display: none;
   }
 
   .links-container {
-    height: auto; /* Always show links */
+    height: auto;
     overflow: visible;
   }
 
   .links {
-    flex-direction: row; /* Align links horizontally */
-    gap: 2rem;
-    justify-content: flex-end;
+    flex-direction: row;
   }
-}
 
-/*
-=============== 
-Header Banner
-===============
-*/
-
-header {
-  min-height: 100vh;
-  background: linear-gradient(rgba(63, 208, 212, 0.5), rgba(0, 0, 0, 0.7)),
-    url('./back.jpg') center/cover no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.banner {
-  color: var(--clr-white);
-}
-
-.banner h1 {
-  font-size: 3rem;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-}
-
-.banner p {
-  font-size: 1.2rem;
-  max-width: 600px;
-  margin: 1rem auto;
-}
-
-.banner .btn {
-  color: var(--clr-white);
-  background: var(--clr-primary-5);
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  border-radius: var(--radius);
-}
-
-.banner .btn:hover {
-  background: var(--clr-primary-4);
+  .links a {
+    padding: 0;
+    margin: 0 1rem;
+  }
 }
