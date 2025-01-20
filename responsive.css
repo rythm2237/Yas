@@ -108,6 +108,14 @@
     .links a:hover {
       color: var(--clr-white);
     }
+.links {
+    flex-direction: row;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+      
   }
   
   @media screen and (max-width: 768px){
@@ -148,4 +156,23 @@
         font-size: .8rem;
         
       }
+}
+
+
+/* Small screens (column layout) */
+@media screen and (max-width: 800px) {
+  .links-container {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+  }
+
+  .links {
+    flex-direction: column; /* Stack links vertically */
+    text-align: center;
+  }
+
+  .nav-toggle {
+    display: block; /* Show toggle button on small screens */
+  }
 }
