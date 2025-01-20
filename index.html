@@ -1,37 +1,58 @@
-<header id="home">
-  <!-- navbar -->
-  <nav id="nav">
-    <div class="nav-center">
-      <!-- nav header -->
-      <div class="nav-header">
-        <img src="./logo.png" class="logo" alt="Logo" />
-        <button class="nav-toggle">
-          <i class="fas fa-bars"></i>
-        </button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yas Website</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.png">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="responsive.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header id="home">
+    <nav id="nav">
+      <div class="nav-center">
+        <div class="nav-header">
+          <img src="./logo.png" class="logo" alt="Logo" />
+          <button class="nav-toggle">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+        <div class="links-container">
+          <ul class="links">
+            <li><a href="#home" class="scroll-link">Home</a></li>
+            <li><a href="#about" class="scroll-link">About Me</a></li>
+            <li><a href="#services" class="scroll-link">Services</a></li>
+            <li><a href="#products" class="scroll-link">Products</a></li>
+            <li><a href="#review" class="scroll-link">Reviews</a></li>
+            <li><a href="#question" class="scroll-link">FAQ</a></li>
+          </ul>
+        </div>
       </div>
-      <!-- links -->
-      <div class="links-container">
-        <ul class="links">
-          <li><a href="#home" class="scroll-link">Home</a></li>
-          <li><a href="#about" class="scroll-link">About Me</a></li>
-          <li><a href="#services" class="scroll-link">Resume</a></li>
-          <li><a href="#products" class="scroll-link">Portfolio</a></li>
-          <li><a href="#review" class="scroll-link">Review</a></li>
-          <li><a href="#question" class="scroll-link">FAQ</a></li>
-        </ul>
+    </nav>
+    <div class="banner">
+      <div class="container">
+        <h1>Who I Am</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas eos neque sunt in?</p>
+        <a href="#contact" class="scroll-link btn btn-white">Contact Us</a>
       </div>
     </div>
-  </nav>
-  <!-- banner -->
-  <div class="banner">
-    <div class="container">
-      <h1>Who I Am</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas eos
-        neque sunt in? Id, necessitatibus quos quisquam distinctio laudantium
-        fugiat?
-      </p>
-      <a href="#contact" class="scroll-link btn btn-white">Contact Us</a>
-    </div>
-  </div>
-</header>
+  </header>
+
+  <!-- Other Sections -->
+  <!-- Add your remaining sections: About, Services, Products, Reviews, FAQ, Footer -->
+
+  <!-- Footer -->
+  <footer id="contact">
+    <p>&copy; <span id="date"></span> Yas Digital Marketing. All rights reserved.</p>
+    <a href="#home" class="top-link"><i class="fas fa-arrow-up"></i></a>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="app.js"></script>
+</body>
+</html>
