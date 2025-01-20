@@ -6,33 +6,24 @@ const navToggle = document.querySelector(".nav-toggle");
 const linksContainer = document.querySelector(".links-container");
 
 navToggle.addEventListener("click", () => {
-  const containerHeight = linksContainer.getBoundingClientRect().height;
-  linksContainer.style.height = containerHeight === 0 ? `${linksContainer.scrollHeight}px` : 0;
+  const containerHeight = linksContainer.scrollHeight;
+  linksContainer.style.height = linksContainer.style.height ? "0px" : `${containerHeight}px`;
 });
 
 // Smooth Scrolling
-const scrollLinks = document.querySelectorAll(".scroll-link");
-scrollLinks.forEach((link) => {
+document.querySelectorAll(".scroll-link").forEach((link) => {
   link.addEventListener("click", (e) => {
     e.preventDefault();
     const id = e.target.getAttribute("href").slice(1);
-    const element = document.getElementById(id);
-    const navHeight = document.querySelector("nav").getBoundingClientRect().height;
-    const containerHeight = linksContainer.getBoundingClientRect().height;
-    const fixedNav = document.querySelector("nav").classList.contains("fixed-nav");
+    const target = document.getElementById(id);
+    const navHeight = document.querySelector("nav").offsetHeight;
 
-    let position = element.offsetTop - navHeight;
+    window.scrollTo({
+      top: target.offsetTop - navHeight,
+      behavior: "smooth",
+    });
 
-    if (!fixedNav) {
-      position -= navHeight;
-    }
-
-    if (navHeight > 82) {
-      position += containerHeight;
-    }
-
-    window.scrollTo({ left: 0, top: position, behavior: "smooth" });
-    linksContainer.style.height = 0; // Close the menu
+    linksContainer.style.height = "0px"; // Close the menu
   });
 });
 
@@ -40,14 +31,9 @@ scrollLinks.forEach((link) => {
 window.addEventListener("scroll", () => {
   const navbar = document.getElementById("nav");
   const topLink = document.querySelector(".top-link");
-  const scrollHeight = window.pageYOffset;
-  const navHeight = navbar.getBoundingClientRect().height;
+  const scrollHeight = window.scrollY;
+  const navHeight = navbar.offsetHeight;
 
-  if (scrollHeight > navHeight) {
-    navbar.classList.add("fixed-nav");
-  } else {
-    navbar.classList.remove("fixed-nav");
-  }
-
+  navbar.classList.toggle("fixed-nav", scrollHeight > navHeight);
   topLink.classList.toggle("show-link", scrollHeight > 500);
 });
