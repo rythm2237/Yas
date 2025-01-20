@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
       linksContainer.style.height = 0;
     }
   });
+  
 });
 
 
@@ -32,6 +33,14 @@ document.addEventListener("DOMContentLoaded", () => {
     if (containerHeight === 0) {
       linksContainer.style.height = `${linksContainer.scrollHeight}px`;
     } else {
+      linksContainer.style.height = 0;
+    }
+  });
+
+    // Close menu when clicking outside the header
+  document.addEventListener("click", (e) => {
+    const isClickInsideHeader = e.target.closest("header");
+    if (!isClickInsideHeader) {
       linksContainer.style.height = 0;
     }
   });
