@@ -5,48 +5,118 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Yas Digital Marketing - Professional services and solutions.">
   <meta name="keywords" content="Digital Marketing, Services, SEO, Social Media, Products">
-  <title>Yas Website</title>
+  <meta name="author" content="Yas Digital Marketing">
+  <title>Yas Digital Marketing</title>
   <link rel="icon" type="image/x-icon" href="/favicon.png">
+  <!-- Font Awesome for Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="responsive.css">
 </head>
 <body>
-  <!-- Header -->
+  <!-- Header Section -->
   <header id="home">
     <nav id="nav">
-      <div class="nav-center">
-        <div class="nav-header">
-          <img src="./logo.png" class="logo" alt="Logo">
-          <button class="nav-toggle" aria-label="Toggle Navigation">
-            <i class="fas fa-bars"></i>
-          </button>
-        </div>
-        <div class="links-container">
-          <ul class="links">
-            <li><a href="#home" class="scroll-link">Home</a></li>
-            <li><a href="#about" class="scroll-link">About Me</a></li>
-            <li><a href="#services" class="scroll-link">Services</a></li>
-            <li><a href="#products" class="scroll-link">Products</a></li>
-            <li><a href="#review" class="scroll-link">Reviews</a></li>
-            <li><a href="#question" class="scroll-link">FAQ</a></li>
-          </ul>
-        </div>
+      <div class="nav-header">
+        <img src="logo.png" alt="Yas Logo" class="logo">
+        <button class="nav-toggle" aria-label="Toggle Navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+      <div class="links-container">
+        <ul class="links">
+          <li><a href="#home" class="scroll-link">Home</a></li>
+          <li><a href="#about" class="scroll-link">About Me</a></li>
+          <li><a href="#services" class="scroll-link">Services</a></li>
+          <li><a href="#products" class="scroll-link">Products</a></li>
+          <li><a href="#review" class="scroll-link">Reviews</a></li>
+          <li><a href="#faq" class="scroll-link">FAQ</a></li>
+          <li><a href="#contact" class="scroll-link">Contact</a></li>
+        </ul>
       </div>
     </nav>
     <div class="banner">
       <div class="container">
-        <h1>Who I Am</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas eos neque sunt in?</p>
-        <a href="#contact" class="scroll-link btn btn-white">Contact Us</a>
+        <h1>Welcome to Yas Digital Marketing</h1>
+        <p>Your trusted partner in growing your online presence and reaching your audience effectively.</p>
+        <a href="#contact" class="btn btn-primary">Get in Touch</a>
       </div>
     </div>
   </header>
-  <!-- Footer -->
-  <footer id="contact">
-    <p>&copy; <span id="date"></span> Yas Digital Marketing. All rights reserved.</p>
-    <a href="#home" class="top-link"><i class="fas fa-arrow-up"></i></a>
+
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque quod reiciendis asperiores debitis ad.</p>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services-section">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="services">
+        <div class="service">
+          <i class="fas fa-search"></i>
+          <h3>SEO Optimization</h3>
+          <p>Boost your website’s visibility on search engines.</p>
+        </div>
+        <div class="service">
+          <i class="fas fa-bullhorn"></i>
+          <h3>Social Media Marketing</h3>
+          <p>Engage your audience and grow your brand online.</p>
+        </div>
+        <div class="service">
+          <i class="fas fa-chart-line"></i>
+          <h3>Analytics</h3>
+          <p>Track your performance and optimize your strategies.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" class="products-section">
+    <div class="container">
+      <h2>Our Products</h2>
+      <p>Explore our range of digital marketing tools and solutions tailored to your needs.</p>
+    </div>
+  </section>
+
+  <!-- Reviews Section -->
+  <section id="review" class="reviews-section">
+    <div class="container">
+      <h2>Customer Reviews</h2>
+      <p>Hear what our clients have to say about working with us.</p>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="faq-section">
+    <div class="container">
+      <h2>Frequently Asked Questions</h2>
+      <p>Find answers to common questions about our services and products.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <footer id="contact" class="footer">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>Have questions or need assistance? We’re here to help!</p>
+      <ul>
+        <li><i class="fas fa-envelope"></i> email@example.com</li>
+        <li><i class="fas fa-phone"></i> +123-456-7890</li>
+        <li><i class="fas fa-map-marker-alt"></i> 123 Digital Street, Marketing City</li>
+      </ul>
+      <p>&copy; <span id="date"></span> Yas Digital Marketing. All rights reserved.</p>
+      <a href="#home" class="top-link" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+    </div>
   </footer>
+
+  <!-- JavaScript -->
   <script src="app.js"></script>
 </body>
 </html>
