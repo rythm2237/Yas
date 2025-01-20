@@ -195,13 +195,18 @@ nav {
   justify-content: space-between;
 }
 .nav-toggle {
+  display: block; /* Show the button on small screens */
   font-size: 1.5rem;
   color: var(--clr-grey-1);
   background: transparent;
-  border-color: transparent;
-  transition: var(--transition);
+  border: none;
   cursor: pointer;
+  position: absolute; /* Position it in the top-right */
+  top: 1rem; /* Adjust top position */
+  right: 1rem; /* Adjust right position */
+  z-index: 1100; /* Ensure it stays above the other content */
 }
+
 .nav-toggle:hover {
   color: var(--clr-secondary);
 }
