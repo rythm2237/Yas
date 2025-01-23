@@ -986,3 +986,15 @@ input[type=submit]:hover {
 
 
 
+.service-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  padding: 1rem;
+  transition: var(--transition);
+}
+
+.service-link:hover {
+  background-color: #f4f4f4; /* Optional hover effect */
+  transform: scale(1.02); /* Slight zoom effect */
+}
