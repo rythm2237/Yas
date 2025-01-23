@@ -295,3 +295,6 @@ document.getElementById('ctaButton').addEventListener('click', function(event) {
   // Alternatively, show an alert message (optional):
   // alert('Thank you for clicking! Redirecting to the contact page...');
 });
+
+document.getElementById("date").textContent = new Date().getFullYear();
+
