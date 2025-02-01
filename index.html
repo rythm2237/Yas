@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Test</title>
+    <title>Digital Marketing Services | SEO, Social Media, PPC & More</title>
+    <meta name="description" content="Expert digital marketing services to boost traffic, leads, and sales. Contact us for customized SEO, PPC, and social media strategies tailored to your business.">
+    <meta name="keywords" content="digital marketing services, SEO, social media marketing, PPC, online marketing, digital marketing expert">
+
     <link rel="icon" type="image/x-icon" href="/favicon.png">
     <!-- font-awesome -->
     <link
@@ -54,12 +57,13 @@
       <!-- banner -->
       <div class="banner">
         <div class="container">
-          <h1>who I Am?</h1>
-          <h2>Yas Tayebi</h2>
+          <div style="text-align: center; margin-top: 50px;">
+            <h1 style="font-size:54px; margin-bottom: 50px;">Grow Online with Expert Digital Marketing</h1>
+            <h2 style="font-size: 24px;">From SEO to Social Media, We Deliver Customized Strategies to Help Your Business Grow.</h2>
+            <a href="/contact" class="cta-button">Schedule a Free Consultation</a>
+          </div>
 
-          <p>
-            I'm a marketing expert, self-made entrepreneur, and web developer passionate about learning, creativity, and helping others.
-          </p>
+
           <a href="#Conntact" class="scroll-link btn btn-white">Conntact Me</a>
         </div>
       </div>
@@ -69,7 +73,7 @@
     <section class="section" id="about">
       <div class="title">
         <h2>About<span>Me</span></h2>
-        <h3 class="about-title">Raise Yourself To Help Mankind</h3>
+        <h3 class="about-title">Seo specialist</h3>
       </div>
       <div class="about-center section-center" >
         <article class="about-img">
@@ -84,27 +88,45 @@
           </div>
           <div class="about-content">
 <!--start about items -->
-            <div class="content active" id="history">
+            <div class="content active about-content" id="history">
                 <h3>History</h3>
-                <p>"From Zero to Web Developer: My Journey"
+                <p  id="short-text">"From Zero to Web Developer: My Journey"
 
                   Hello! I'm Yas, and I've spent over 12 years navigating the dynamic world of marketing and advertising. But my story begins long before that, as I've been exploring diverse fields and cultivating my passion for learning since childhood.
                   
-                  My entrepreneurial spirit led me to establish my own business, which I nurtured for eight years. Starting from scratch, I learned the ropes of business, honed my problem-solving skills, and developed a knack for logical thinking and decision-making. Throughout this journey, I never lost my creative spark or that ever-present smile.
+                  My entrepreneurial spirit led me to establish my own business, which I nurtured for eight years. Starting from... 
+                
+                <span class="read-more" onclick="openModal()">Read More</span>
+                </p>
+                
+                <!-- Pop-up Modal -->
+<div id="about-modal" class="modal">
+  <div class="modal-content">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <h2>About Me</h2>
+      <p>
+
+        Hello! I'm Yas, and I've spent over 12 years navigating the dynamic world of marketing and advertising. But my story begins long before that, as I've been exploring diverse fields and cultivating my passion for learning since childhood.
                   
-                  As a lifelong learner, I've delved into various domains, including IT and networking, earning a degree in computer software engineering alongside my academic achievements in industrial and marketing management.
+        My entrepreneurial spirit led me to establish my own business, which I nurtured for eight years. Starting from scratch, I learned the ropes of business, honed my problem-solving skills, and developed a knack for logical thinking and decision-making. Throughout this journey, I never lost my creative spark or that ever-present smile.
                   
-                  Beyond my professional pursuits, I'm an avid enthusiast of computer games, football, tennis, and chess. When I'm not exploring virtual worlds or watching sports, you can find me traveling and camping, embracing the wonders of the great outdoors.
+        As a lifelong learner, I've delved into various domains, including IT and networking, earning a degree in computer software engineering alongside my academic achievements in industrial and marketing management.
+        
+        Beyond my professional pursuits, I'm an avid enthusiast of computer games, football, tennis, and chess. When I'm not exploring virtual worlds or watching sports, you can find me traveling and camping, embracing the wonders of the great outdoors.
+        
+        My passion for web development led me to earn certificates in HTML, CSS, and JavaScript, and I thoroughly enjoy coding and web design. My website is a reflection of my portfolio, showcasing my expertise in marketing, management, and web development.
+        
+        But life isn't just about professional success; it's also about giving back. I'm actively involved in charity activities, using my skills and resources to make a positive impact on the community.
+        
+        I'm on a mission to combine my love for coding, web design, and my extensive experience in marketing to create innovative and user-friendly web experiences. I'm here to connect with potential employers and collaborators who share my passion for the digital world.
+        
+        So, if you're looking for a dedicated, detail-oriented problem solver with a creative edge, you've come to the right place. Let's connect, explore possibilities, and make the web an even more exciting place together.
+        
+        Thank you for visiting my website, and I look forward to connecting with you soon!
+      </p>
+  </div>
+</div>
                   
-                  My passion for web development led me to earn certificates in HTML, CSS, and JavaScript, and I thoroughly enjoy coding and web design. My website is a reflection of my portfolio, showcasing my expertise in marketing, management, and web development.
-                  
-                  But life isn't just about professional success; it's also about giving back. I'm actively involved in charity activities, using my skills and resources to make a positive impact on the community.
-                  
-                  I'm on a mission to combine my love for coding, web design, and my extensive experience in marketing to create innovative and user-friendly web experiences. I'm here to connect with potential employers and collaborators who share my passion for the digital world.
-                  
-                  So, if you're looking for a dedicated, detail-oriented problem solver with a creative edge, you've come to the right place. Let's connect, explore possibilities, and make the web an even more exciting place together.
-                  
-                  Thank you for visiting my website, and I look forward to connecting with you soon!</p>
             </div>
 <!--end of about items -->
 <!--start about items -->
@@ -168,15 +190,19 @@
           <li onmouseover="move(0)">
               <div class="service">
               <a href="SocialMedia.html" class="service-link">
-                <h5>Social Media Marketing</h5>
+                <h5>Social Media</h5>
               </a>
 </div>
 
           </li>
-          <li onmouseover="move(1)">SEO</li>
+          <li onmouseover="move(1)">
+            <a href="SEO.html" class="service-link">
+              <h4>SEO</h4>
+            </a>
+            </li>
           <li onmouseover="move(2)">Web Developing</li>
           <li onmouseover="move(3)">Digital Marketing</li>
-          <li onmouseover="move(4)">Web design</li>
+          <li onmouseover="move(4)">Copyrighting</li>
         </ul>
       </div>
       </div> 
@@ -365,14 +391,23 @@
 
         </div>
         
-          <form class="form footer-items" action="#">
+          <form class="form footer-items" action=="https://gmail.us8.list-manage.com/subscribe/post?u=46e094e5fe1640760fc397764&amp;id=9bb1184330&amp;f_id=008c08e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
               <p>Subscribe to our Newsletter</p>
               <input type="text" placeholder="Name" name="name" required>
-              <input type="text" placeholder="Email address" name="mail" required>
+              <input type="email" placeholder="Email address" name="EMAIL" required>
               <label>
                 <input type="checkbox" checked="checked" name="subscribe"><p> Daily Newsletter</p>
               </label>
-              <input type="submit" value="Subscribe">
+              <div>
+              <div class="response" id="mce-error-response" style="display: none;"></div>
+              <div class="response" id="mce-success-response" style="display: none;"></div>
+          </div>
+      <div aria-hidden="true" style="position: absolute; left: -5000px;">
+          /* real people should not fill this in and expect good things - do not remove this or risk form bot signups */
+          <input type="text" name="b_46e094e5fe1640760fc397764_9bb1184330" tabindex="-1" value="">
+      </div>
+              <input type="submit"  name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
+              <p><a href="http://eepurl.com/i7Osks" ><span style="display: inline-block;  border-radius: 4px;"></span></a></p>
           </form>
       </div>
       

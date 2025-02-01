@@ -76,6 +76,10 @@ body {
   line-height: 1.5;
   font-size: 0.875rem;
 }
+
+
+
+
 ul {
   list-style-type: none;
 }
@@ -92,7 +96,8 @@ img {
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5 {
   letter-spacing: var(--spacing);
   text-transform: capitalize;
   line-height: 1.25;
@@ -184,7 +189,8 @@ nav {
   color: var(--clr-grey-1);
 }
 .fixed-nav .links a:hover {
-  color: var(--clr-secondary);
+  color: var(--clr-grey-5);
+  font-size: 1.5rem;
 }
 /* .fixed-nav .links-container {
   height: auto !important;
@@ -229,7 +235,11 @@ nav {
 }
 .links a:hover {
   color: var(--clr-grey-1);
+  
 }
+
+
+
 
 
 /* hero */
@@ -266,7 +276,6 @@ header {
   color: var(--clr-secondary);
   text-transform: uppercase;
   font-size: 2.2rem;
-  margin-left: .4rem;
 }
 #about,
 #services,
@@ -897,7 +906,7 @@ footer p {
   
   }
 
-input[type=text], input[type=submit] {
+input[type=text], input[type=submit], input[type=email] {
   width: 90%;
   padding: .4rem;
   margin: 4px auto;
@@ -961,4 +970,215 @@ input[type=submit]:hover {
   transform: scale(1.02); /* Slight zoom effect */
 }
 
+/* CTA Button Styling */
+.cta-button {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff; /* Text color */
+  background-color: #007bff; /* Button color */
+  text-decoration: none;
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
 
+.cta-button:hover {
+  background-color: #0056b3; /* Darker color on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+
+
+/* Remove the global header background */
+body.sub-page header {
+  background: none;
+  min-height: 1vh;
+}
+body.sub-page {
+  background-color: #007bff;
+}
+body.seo header {
+  background: none;
+  min-height: 1vh;
+}
+body.sub-page {
+  background-color: var(--clr-grey-3);
+}
+
+
+
+/*Temporay page style*/
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  background: url('background.jpg') center/cover no-repeat;
+  text-align: center;
+  color: white;
+}
+
+/* Container */
+.construction-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--clr-primary-4);
+  padding: 20px;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* Countdown Timer */
+#countdown {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.countdown-box {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 15px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.countdown-box span {
+  font-size: 2rem;
+  font-weight: bold;
+  display: block;
+}
+
+/* Subscription Form */
+.subscribe-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.subscribe-form input {
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.subscribe-form button {
+  padding: 10px;
+  border: none;
+  background: #ff9800;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.subscribe-form button:hover {
+  background: #e68900;
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.social-links a:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  h1 {
+      font-size: 2rem;
+  }
+  
+  .countdown-box {
+      padding: 10px;
+  }
+
+  .social-links a {
+      font-size: 1rem;
+      padding: 5px;
+  }
+}
+#mc_embed_signup_scroll h2{
+  font-family: var(--ff-primary);
+}
+
+
+
+
+/* Read More Link */
+.read-more {
+  color: #007bff;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Modal Styles */
+.read-more {
+  color: #007bff;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: underline;
+}
+/* Modal (Initially Hidden) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  max-width: 700px;
+  border-radius: 8px;
+  text-align: center;
+  position: relative; /* Fix for close button */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.close-btn {
+  position: absolute;
+  right: 25px;
+  top: 10px;
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #333; /* Ensure visibility */
+  background: transparent;
+  border: none;
+}
+.close-btn:hover {
+  color: red;
+}

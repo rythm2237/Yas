@@ -297,3 +297,72 @@ linkss.forEach(link => {
 
 
 
+// Temporary page
+// Countdown Timer
+const countdownDate = new Date("September 30, 2025 00:00:00").getTime();
+
+const updateCountdown = () => {
+    const now = new Date().getTime();
+    const timeLeft = countdownDate - now;
+
+    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+    document.getElementById("days").textContent = days;
+    document.getElementById("hours").textContent = hours;
+    document.getElementById("minutes").textContent = minutes;
+    document.getElementById("seconds").textContent = seconds;
+
+    if (timeLeft < 0) {
+        clearInterval(countdownInterval);
+        document.getElementById("countdown").innerHTML = "<h2>We're Live!</h2>";
+    }
+};
+
+const countdownInterval = setInterval(updateCountdown, 1000);
+updateCountdown();
+
+
+
+
+//Ajax code for subscribers
+document.querySelector('.subscribe-form').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent page reload
+
+  const form = this;
+  const email = form.querySelector('input[name="EMAIL"]').value;
+  const actionURL = form.getAttribute('action');
+
+  if (email) {
+      fetch(actionURL, {
+          method: "POST",
+          body: new FormData(form),
+          mode: "no-cors"
+      }).then(() => {
+          alert("Thank you! You've been subscribed.");
+          form.reset(); // Reset the form after submission
+      }).catch(error => console.error("Error:", error));
+  }
+});
+
+
+// Function to open the modal
+function openModal() {
+  document.getElementById("about-modal").style.display = "flex";
+}
+
+// Function to close the modal
+function closeModal() {
+  document.getElementById("about-modal").style.display = "none";
+}
+
+// Close the modal when clicking outside of it
+window.onclick = function(event) {
+  const modal = document.getElementById("about-modal");
+  if (event.target === modal) {
+      modal.style.display = "none";
+  }
+};
+
