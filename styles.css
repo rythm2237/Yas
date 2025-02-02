@@ -202,7 +202,7 @@ nav {
 }
 .nav-toggle {
   font-size: 1.5rem;
-  color: var(--clr-grey-1);
+  color: var(--clr-grey-3);
   background: transparent;
   border-color: transparent;
   transition: var(--transition);
@@ -249,21 +249,34 @@ header {
     url(./back.jpg) center/cover no-repeat;
 }
 .banner {
-  min-height: 100vh;
+  min-height: 70vh;
+  margin-top: 50px;
   display: grid;
   place-items: center;
   text-align: center;
 }
+.headline{
+  text-align: center;
+  margin-top: 50px;
+}
 .container h1 {
+  max-width: 60rem;
   color: var(--clr-white);
   text-transform: uppercase;
-}
-.container p {
+  font-size:54px; 
+  margin-bottom: 150px;
+} 
+.container h2 {
+  font-size: 24px;
   color: var(--clr-white);
   max-width: 25rem;
-  margin: 0 auto;
+  margin: 5vh auto;
   margin-bottom: 1.25rem;
+  }
+.container a{
+  margin-bottom: 2rem;
 }
+
 
 /* sections and title */
 
