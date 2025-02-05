@@ -365,4 +365,7 @@ window.onclick = function(event) {
       modal.style.display = "none";
   }
 };
+document.querySelectorAll('li').forEach((item, index) => {
+  item.addEventListener('mouseover', () => move(index));
+});
 
