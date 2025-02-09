@@ -166,6 +166,11 @@ function closeAll(){
   document.getElementById("overlay").className = "hide";
   document.getElementById("pop").className = "hide";
 }
+document.addEventListener("keydown", function(event) {
+  if (event.key === "Escape") {
+    closeAll(); // Hide the popup when ESC is pressed
+  }
+});
 
 function creation(image, title, price){
   let it = document.createElement("div");
@@ -387,4 +392,5 @@ window.onclick = function(event) {
 document.querySelectorAll('li').forEach((item, index) => {
   item.addEventListener('mouseover', () => move(index));
 });
+
 
