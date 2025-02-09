@@ -138,62 +138,81 @@ left.onclick=function () {
 
 }
 //Galery
+let products = [
+  { image: "1.jpg", name: "Full SEO Package", description: "Complete on-page and off-page SEO", price: "400$ / Project" },
+  { image: "2.jpg", name: "Google Ads Package", description: "PPC Campaign Management", price: "300$ / Month" },
+  { image: "3.jpg", name: "Social Media Management", description: "Facebook, Instagram, Twitter Marketing", price: "250$ / Month" },
+  { image: "4.jpg", name: "Website Development", description: "Custom Website with WordPress", price: "700$ / Project" },
+  { image: "5.jpg", name: "Content Writing", description: "SEO-Optimized Articles & Blog Posts", price: "50$ / Article" },
+  { image: "6.jpg", name: "Graphic Design", description: "Logo, Banners, and Branding", price: "150$ / Design" },
+  { image: "7.jpg", name: "Email Marketing", description: "Newsletter Campaigns & Automation", price: "200$ / Campaign" },
+  { image: "8.jpg", name: "Local SEO Services", description: "Optimize Business for Local Search", price: "350$ / Project" }
+];
 
 function popup(i){
-  overlay.className= "show"
-  pop.className= "show" 
-  big_img.src= "img/" + i + ".jpg"
+  let product = products[i]; // Fix: Get product data
+
+  document.getElementById("overlay").className = "show";
+  document.getElementById("pop").className = "show";
+
+  document.getElementById("big_img").src = "img/" + product.image;
+  document.getElementById("pop_title").innerHTML = product.name;
+  document.getElementById("pop_desc").innerHTML = product.description;
+  document.getElementById("pop_cta").href = "#"; // Change this to a real product link
+  document.getElementById("pop_cta").innerHTML = "Learn More";
 }
+
 function closeAll(){
-  overlay.className= "hide"
-  pop.className= "hide"    
-}
-function creation(image, title, des, price){
-  let it = document.createElement("div")
-    it.className = "items hide"
-        
-      let im = document.createElement("img")
-          im.src = "img/" + image
-      let mas = document.createElement("div")
-          mas.className = "info"
-
-          let h = document.createElement("h2")
-          h.innerHTML = title
-          let par = document.createElement("p")
-          par.innerHTML = des
-          let sp = document.createElement("span")
-          sp.innerHTML = price
-          let anc = document.createElement("a")
-          anc.innerHTML = "Buy"
-          anc.href = "#"
-mas.appendChild(h)
-mas.appendChild(par)
-mas.appendChild(sp)
-mas.appendChild(anc)
-
-it.appendChild(im)
-it.appendChild(mas)
-return it
+  document.getElementById("overlay").className = "hide";
+  document.getElementById("pop").className = "hide";
 }
 
+function creation(image, title, price){
+  let it = document.createElement("div");
+  it.className = "items hide";
 
-let cols = document.querySelectorAll("#all > .sut")
+  let im = document.createElement("img");
+  im.src = "img/" + image;
+
+  let mas = document.createElement("div");
+  mas.className = "info";
+
+  let h = document.createElement("h2");
+  h.innerHTML = title;
+
+  let sp = document.createElement("span");
+  sp.innerHTML = price;
+
+  let anc = document.createElement("a");
+  anc.innerHTML = "Buy";
+  anc.href = "#";
+
+  mas.appendChild(h);
+  mas.appendChild(sp);
+  mas.appendChild(anc);
+
+  it.appendChild(im);
+  it.appendChild(mas);
+  return it;
+}
+
+let cols = document.querySelectorAll("#all > .sut");
 function attachment(i){
-  let p1 = (i % 14 + 1) + ".jpg"
-  let p2 = "Product" + (i + 1)
-  let p3 = "Detals" + (i + 1)
-  let p4 = (Math.floor(Math.random() * 20))*1000 + "Ft"
+  if (i >= products.length) return;
 
-  let el = creation(p1,p2,p3,p4)
-  el.className = "items show"
+  let product = products[i];
+  let el = creation(product.image, product.name, product.price);
+
+  el.className = "items show";
   el.onclick = function(){
-      popup(i % 14 + 1)
-  }
+      popup(i); // Pass index to popup function
+  };
 
-  cols[i % 4].appendChild(el)
+  cols[i % 4].appendChild(el);
 }
-for (i=0; i<8; i++){
-  setTimeout ("attachment(" + i +  ")", 300*i)
+
+for (let i = 0; i < products.length; i++){
+  setTimeout(() => attachment(i), 300 * i);
 }
 
 
