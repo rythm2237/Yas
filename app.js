@@ -171,6 +171,9 @@ document.addEventListener("keydown", function(event) {
     closeAll(); // Hide the popup when ESC is pressed
   }
 });
+document.addEventListener("scroll", function() {
+  closeAll(); // Hide popup when scrolling
+});
 
 function creation(image, title, price){
   let it = document.createElement("div");

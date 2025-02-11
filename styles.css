@@ -288,16 +288,21 @@ header {
   text-transform: uppercase;
   font-size: 2.2rem;
 }
-#about,
-#services,
+#about{
+  min-height: 80vh;
+  padding-top: 4.5rem;
+
+}
 #review,
-#products,
 #question {
   min-height: 80vh;
+  padding-top: 4.5rem;
 }
-#services {
-  background: var(--clr-white);
+#products{
+  min-height: 80vh;
+  padding-top: 3rem;
 }
+
 
 @keyframes bounce {
   0% {
@@ -404,12 +409,15 @@ Services / slider
 */
 
 #services{
-  padding: 0 3rem;
+  padding: 5rem 0;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  background: var(--clr-white);
+  min-height: 80vh;
 }
+
 .container{
   min-width: 30%;
 }
@@ -632,7 +640,7 @@ top: 50px;
 }
 #pop_title:hover{
   background-color: #000;
-  
+
 }
 }
 #pop.hide{
