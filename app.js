@@ -155,7 +155,7 @@ function popup(i){
   document.getElementById("overlay").className = "show";
   document.getElementById("pop").className = "show";
 
-  document.getElementById("big_img").src = "img/" + product.image;
+  document.getElementById("big_img").src = "img/products/" + product.image;
   document.getElementById("pop_title").innerHTML = product.name;
   document.getElementById("pop_desc").innerHTML = product.description;
   document.getElementById("pop_cta").href = "#"; // Change this to a real product link
@@ -326,11 +326,17 @@ linkss.forEach(link => {
 
 // Temporary page
 // Countdown Timer
-const countdownDate = new Date("September 30, 2025 00:00:00").getTime();
+const targetDate = new Date("2024-12-31T23:59:59").getTime(); // Example target date
 
 const updateCountdown = () => {
     const now = new Date().getTime();
-    const timeLeft = countdownDate - now;
+    const timeLeft = targetDate - now;
+
+    if (timeLeft < 0) {
+        clearInterval(countdownInterval);
+        document.getElementById("countdown").innerHTML = "<h2>We're Live!</h2>";
+        return;
+    }
 
     const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
     const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -341,16 +347,17 @@ const updateCountdown = () => {
     document.getElementById("hours").textContent = hours;
     document.getElementById("minutes").textContent = minutes;
     document.getElementById("seconds").textContent = seconds;
-
-    if (timeLeft < 0) {
-        clearInterval(countdownInterval);
-        document.getElementById("countdown").innerHTML = "<h2>We're Live!</h2>";
-    }
 };
 
+// Start Countdown
 const countdownInterval = setInterval(updateCountdown, 1000);
 updateCountdown();
 
+
+document.addEventListener("DOMContentLoaded", () => {
+  setInterval(updateCountdown, 1000);
+  updateCountdown();
+});
 
 
 

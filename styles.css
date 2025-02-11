@@ -1062,7 +1062,7 @@ body.sub-page {
 body {
   margin: 0;
   padding: 0;
-  background: url('background.jpg') center/cover no-repeat;
+  /* background: url('background.jpg') center/cover no-repeat; */
   text-align: center;
   color: white;
 }
