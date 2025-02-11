@@ -180,7 +180,7 @@ function creation(image, title, price){
   it.className = "items hide";
 
   let im = document.createElement("img");
-  im.src = "img/" + image;
+  im.src = "img/products/" + image;
 
   let mas = document.createElement("div");
   mas.className = "info";
